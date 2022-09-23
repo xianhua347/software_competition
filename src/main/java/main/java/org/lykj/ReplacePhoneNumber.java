@@ -17,7 +17,7 @@ public class ReplacePhoneNumber {
         }
     }
 
-    /**替换手机号方法 使用正则表达式替换
+    /**将手机号码第4位到第7位替换成* 使用正则表达式实现
      * @param phoneNumber
      *        需要替换的手机号
      * @return 替换完成的手机号码
