@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.lykj'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'name.remal.tools.test:junit5:1.26.147'
+}
+
+test {
+    useJUnitPlatform()
+}
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
