@@ -6,11 +6,13 @@ group 'org.lykj'
 version '1.0'
 
 repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
     mavenCentral()
 }
 
 dependencies {
-    implementation 'name.remal.tools.test:junit5:1.26.147'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
 
 test {
