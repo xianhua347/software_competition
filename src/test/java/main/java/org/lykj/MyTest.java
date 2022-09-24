@@ -1,4 +1,5 @@
-import main.java.org.lykj.ReplacePhoneNumber;
+package main.java.org.lykj;
+
 import org.junit.jupiter.api.Test;
 
 public class MyTest {
