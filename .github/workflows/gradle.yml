@@ -28,10 +28,10 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        
-    - name: Gradle Wrapper Validation
-      uses: gradle/wrapper-validation-action@v1.0.4
-      
+
     - name: Gradle Build Action
-      uses: gradle/gradle-build-action@v2.3.1
+      uses: gradle/gradle-build-action@v2
+      
+    - name: Execute Gradle build
+      run: ./gradlew build
 
