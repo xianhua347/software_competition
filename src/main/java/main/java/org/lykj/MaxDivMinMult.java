@@ -1,6 +1,5 @@
 package main.java.org.lykj;
 
-
 import java.util.Scanner;
 
 public class MaxDivMinMult {
