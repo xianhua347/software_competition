@@ -1,6 +1,7 @@
 package main.java.org.lykj;
 
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -55,7 +56,4 @@ public class FibonacciSequence {
             System.out.print(fib(i)+"\t");
         }
     }
-
-
-
 }
