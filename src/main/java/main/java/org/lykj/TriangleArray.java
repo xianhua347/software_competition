@@ -1,3 +1,5 @@
+package main.java.org.lykj;
+
 /**
  * 杨辉三角
  */
