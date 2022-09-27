@@ -1,10 +1,16 @@
+package main.java.org.lykj;
+
 import java.util.Scanner;
 
+/**
+ * 求利润
+ */
 public class Bonus {
     public static void main(String[] args) {
 
         System.out.println("请输入您创造的利润！（单位：万元）");
         final Scanner scanner = new Scanner(System.in);
+        //如果输入的不是小数类型就继续输入
         while (!scanner.hasNextDouble()){
             System.out.println("请输入金额：");
             scanner.next();

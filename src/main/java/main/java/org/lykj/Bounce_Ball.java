@@ -1,5 +1,8 @@
 package main.java.org.lykj;
 
+/**
+ * 求小球弹起的高度和距离
+ */
 public class Bounce_Ball {
 
     public static void main(String[] args) {

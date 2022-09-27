@@ -6,8 +6,8 @@ public class ChangeDay {
     public static void main(String[] args) {
         System.out.println("请输入年月日");
         final Scanner scanner = new Scanner(System.in);
-         int year = scanner.nextInt();
-         int month = scanner.nextInt();
+        int year = scanner.nextInt();
+        int month = scanner.nextInt();
          int day = scanner.nextInt();
          int sum; //天数总和
 

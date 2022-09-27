@@ -2,6 +2,9 @@ package main.java.org.lykj;
 
 import java.util.HashMap;
 
+/**
+ * 任意输入一段字符串，输出每个字符出现的次数
+ */
 public class CountStrNumber {
     public static void main(String[] args) {
         Counter("我是你妈妈");
@@ -9,6 +12,7 @@ public class CountStrNumber {
 
     public static void Counter(String str) {
 
+        //转换为char类型的数组
         final char[] array = str.toCharArray();
         //创建一个map用于存值
         HashMap<Character, Integer> map = new HashMap<>();
