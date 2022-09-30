@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 /**
  * 求利润
+ * = 2
+ *
  */
 public class Bonus {
     public static void main(String[] args) {
@@ -15,6 +17,7 @@ public class Bonus {
             System.out.println("请输入金额：");
             scanner.next();
         }
+
         double profit = scanner.nextDouble();
         double bonus = 0;
 

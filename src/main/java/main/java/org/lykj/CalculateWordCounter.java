@@ -192,7 +192,6 @@ public class CalculateWordCounter {
         counterEntity.setFigureCount(figureCount);
         counterEntity.setSpaceCount(spaceCount);
         return counterEntity;
-
     }
 
 }

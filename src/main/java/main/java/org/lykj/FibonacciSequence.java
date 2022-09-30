@@ -4,6 +4,7 @@ package main.java.org.lykj;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 
 /**
@@ -55,5 +56,12 @@ public class FibonacciSequence {
         for (int i = 1; i <= count; i++) {
             System.out.print(fib(i)+"\t");
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入要打印的斐波那契数列的个数:");
+        int count = scanner.nextInt();
+        FibonacciSequence.getFibNums(count);
     }
 }

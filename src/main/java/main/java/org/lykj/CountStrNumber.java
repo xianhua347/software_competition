@@ -1,13 +1,17 @@
 package main.java.org.lykj;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 /**
  * 任意输入一段字符串，输出每个字符出现的次数
  */
 public class CountStrNumber {
     public static void main(String[] args) {
-        Counter("我是你妈妈");
+        final Scanner scanner = new Scanner(System.in);
+        final String s = scanner.next();
+        Counter(s);
     }
 
     public static void Counter(String str) {
@@ -19,6 +23,7 @@ public class CountStrNumber {
         //遍历字符串 put到map里面
         for (char c : array) {
             Integer count = map.get(c);
+            //get(key) 返回一个 value 1
             //如果count(KEY)是空就说明这个值是新值 直接put
             if (count == null) map.put(c, 1);
                 //如果count不等于null那就说明map里有这个值
@@ -29,7 +34,8 @@ public class CountStrNumber {
                 map.put(c, count);
             }
         }
-        System.out.printf(String.valueOf(map));
+        for (Map.Entry<Character, Integer> i : map.entrySet())
+            System.out.println(" 字符 " + i.getKey() +  "出现了" + i.getValue() + "次");
 
     }
 }
