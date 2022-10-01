@@ -102,11 +102,7 @@ group by e.deptno;
 /*
 10..求每个部门中的最大工资值和最小工资值,并且它的最小值小于5000,最大值大于 15000
 */
-
-select e.deptno,
-       max(e.sal),
-       min(e.sal)
-from emp e
-where e.sal < 5000
-  and e.sal > 15000
-group by e.deptno;
+select d.deptno,max(e.sal) ,min(e.sal)
+from dept d,emp e
+where d.deptno = e.deptno
+group by d.deptno having min(e.sal)>5000 and max(e.sal)>15000;
