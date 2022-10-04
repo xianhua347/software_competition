@@ -8,6 +8,8 @@ create table my_company.dept
     constraint deptno
         unique (deptno)
 );
+create index deptno
+    on my_company.emp (deptno);
 
 create table my_company.emp
 (
@@ -21,6 +23,16 @@ create table my_company.emp
     constraint emp_ibfk_1
         foreign key (deptno) references my_company.dept (deptno)
 );
+
+/*
+dept data
+*/
+INSERT INTO my_company.dept (deptno, dname) VALUES (1, '业务部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (2, '外包部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (3, '物业部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (6, 'chenfan');
+INSERT INTO my_company.dept (deptno, dname) VALUES (7, '吃饭部');
+
 /*
 emp data
 */
@@ -34,19 +46,6 @@ INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (8, 'f
 INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (9, 'sdfsdeee', 11, 60000, '2022-10-19', 2);
 INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (10, 'sfafsdf', 44, 40000, '2022-10-07', 3);
 
-
-/*
-dept data
-*/
-INSERT INTO my_company.dept (deptno, dname) VALUES (1, '业务部');
-INSERT INTO my_company.dept (deptno, dname) VALUES (2, '外包部');
-INSERT INTO my_company.dept (deptno, dname) VALUES (3, '物业部');
-INSERT INTO my_company.dept (deptno, dname) VALUES (6, 'chenfan');
-INSERT INTO my_company.dept (deptno, dname) VALUES (7, '吃饭部');
-
-
-create index deptno
-    on my_company.emp (deptno);
 
 /*插入一条数据*/
 INSERT INTO my_company.dept (deptno, dname)
