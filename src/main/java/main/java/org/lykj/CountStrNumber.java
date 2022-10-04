@@ -36,6 +36,8 @@ public class CountStrNumber {
         }
         for (Map.Entry<Character, Integer> i : map.entrySet())
             System.out.println(" 字符 " + i.getKey() +  "出现了" + i.getValue() + "次");
-
+        for (Character key : map.keySet()) {
+            System.out.println(" 字符 " + key +  "出现了" + map.get(key) + "次");
+        }
     }
 }

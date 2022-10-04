@@ -21,6 +21,30 @@ create table my_company.emp
     constraint emp_ibfk_1
         foreign key (deptno) references my_company.dept (deptno)
 );
+/*
+emp data
+*/
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (1, 'chen', 100, 1000, '2022-09-08', 1);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (2, 'hua', 11, 1000, '2022-09-29', 2);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (3, 'eee', 11, 7000, '2022-09-10', 2);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (4, 'fff', 23, 111, '2022-09-08', 2);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (5, 'xiaohua', 11, 2000, '2022-09-15', 1);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (6, 'rrrr', 22, 5000, '2022-09-16', 3);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (8, 'fdsfsd', 11, 50000, '2022-10-13', 1);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (9, 'sdfsdeee', 11, 60000, '2022-10-19', 2);
+INSERT INTO my_company.emp (empon, ename, mgrno, sal, bir, deptno) VALUES (10, 'sfafsdf', 44, 40000, '2022-10-07', 3);
+
+
+/*
+dept data
+*/
+INSERT INTO my_company.dept (deptno, dname) VALUES (1, '业务部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (2, '外包部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (3, '物业部');
+INSERT INTO my_company.dept (deptno, dname) VALUES (6, 'chenfan');
+INSERT INTO my_company.dept (deptno, dname) VALUES (7, '吃饭部');
+
+
 create index deptno
     on my_company.emp (deptno);
 
@@ -30,8 +54,8 @@ VALUES (6, '业务部');
 
 /*删除姓张的行*/
 delete
-from dept
-where dname like '张%';
+from emp
+where emp.ename like '张%';
 
 /*
 3.将部门为 003 所有女性员工工资改为 5500
